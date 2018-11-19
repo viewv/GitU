@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 
@@ -13,6 +14,7 @@ public class WindowController {
     @FXML Button exitButton;
     @FXML Button minButton;
     @FXML Button maxButton;
+    @FXML BorderPane BasePane;
 
     class Delta{
         double x,y;
@@ -24,16 +26,15 @@ public class WindowController {
 
     @FXML
     public void getlocation(MouseEvent mouseEvent){
-        Stage stage = (Stage)minButton.getScene().getWindow();
-        dragDelta.x = stage.getX() - mouseEvent.getSceneX();
-        dragDelta.y = stage.getY() - mouseEvent.getScreenY();
+        dragDelta.x = mouseEvent.getSceneX();
+        dragDelta.y = mouseEvent.getScreenY();
     }
 
     @FXML
     public void movwindow(MouseEvent mouseEvent){
-        Stage stage = (Stage)minButton.getScene().getWindow();
-        stage.setX(mouseEvent.getScreenX() + dragDelta.x);
-        stage.setY(mouseEvent.getScreenY() + dragDelta.y);
+        Stage stage = (Stage)BasePane.getScene().getWindow();
+        stage.setX(mouseEvent.getScreenX() - dragDelta.x);
+        stage.setY(mouseEvent.getScreenY() - dragDelta.y);
     }
 
     @FXML

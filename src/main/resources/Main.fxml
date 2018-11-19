@@ -9,8 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-
-<BorderPane prefHeight="738.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.zxnnet.controller.WindowController">
+<BorderPane fx:id="BasePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.zxnnet.controller.WindowController">
    <top>
       <ToolBar fx:id="topbar" onMouseDragged="#movwindow" onMousePressed="#getlocation" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
         <items>
@@ -41,7 +40,7 @@
       </ToolBar>
    </top>
    <center>
-      <SplitPane dividerPositions="0.2286198137171888" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.1532258064516129" BorderPane.alignment="CENTER">
         <items>
           <AnchorPane />
           <AnchorPane>
