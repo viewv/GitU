@@ -1,16 +1,25 @@
 package io.zxnnet.controller;
 
+import io.zxnnet.model.openlocalRepositorie;
+
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 
+import java.io.File;
+import java.io.IOException;
 
-public class WindowController {
 
+public class MainController {
+
+    public Button Import;
+    public Button Init;
+    public Button Clone;
     @FXML Button exitButton;
     @FXML Button minButton;
     @FXML Button maxButton;
@@ -23,6 +32,18 @@ public class WindowController {
     final Delta dragDelta = new Delta();
 
     private Tooltip tooltip = new Tooltip();
+    private openlocalRepositorie localRes = new openlocalRepositorie();
+
+    @FXML
+    public void openProject() throws IOException {
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Open Local Git Repositorie");
+        File file = directoryChooser.showDialog(new Stage());
+        if (file != null){
+           System.out.println(file.getAbsolutePath());
+           localRes.openres(file.getPath());
+        }
+    }
 
     @FXML
     public void getlocation(MouseEvent mouseEvent){

@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c567aa-d9a4-4f14-8bde-53a239794bf2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/WindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/WindowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/WindowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Main.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/GitU.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/GitU.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/WindowController$Delta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/WindowController$Delta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/WindowController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/WindowController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/WindowController$Delta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/WindowController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/model/InitGitResposity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/model/InitGitResposity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -24,25 +29,25 @@
     <session id="1537625464">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.13" value="3" />
-          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.13" value="4" />
+          <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.15" value="3" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="13" />
-          <entry key="dummy" value="16" />
-          <entry key="fxml" value="428" />
-          <entry key="java" value="1214" />
+          <entry key="dummy" value="31" />
+          <entry key="fxml" value="465" />
+          <entry key="java" value="1504" />
           <entry key="md" value="90" />
           <entry key="xml" value="32" />
         </counts>
@@ -50,18 +55,18 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="13" />
-          <entry key="JAVA" value="1214" />
+          <entry key="JAVA" value="1504" />
           <entry key="Markdown" value="90" />
-          <entry key="PLAIN_TEXT" value="16" />
-          <entry key="XML" value="460" />
+          <entry key="PLAIN_TEXT" value="31" />
+          <entry key="XML" value="497" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="4" />
-          <entry key="fxml" value="18" />
+          <entry key="fxml" value="19" />
           <entry key="iml" value="1" />
-          <entry key="java" value="4" />
+          <entry key="java" value="6" />
           <entry key="md" value="2" />
           <entry key="xml" value="2" />
         </counts>
@@ -70,9 +75,9 @@
         <counts>
           <entry key="CSS" value="4" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="4" />
+          <entry key="JAVA" value="6" />
           <entry key="Markdown" value="2" />
-          <entry key="XML" value="20" />
+          <entry key="XML" value="21" />
         </counts>
       </usages-collector>
     </session>
@@ -82,20 +87,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+            <state relative-caret-position="300">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-510">
+              <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/WindowController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+            <state relative-caret-position="180">
+              <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,10 +121,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitGitResposity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Main.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="24" selection-start-column="24" selection-end-column="24" />
+            <state relative-caret-position="1260">
+              <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -131,12 +149,13 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/view/MainApp.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.css" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitGitResposity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/WindowController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/WindowController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" />
       </list>
     </option>
   </component>
@@ -175,11 +194,23 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="107" />
     <option name="y" value="26" />
     <option name="width" value="1380" />
     <option name="height" value="992" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Google Web Toolkit</id>
+          </State>
+        </expanded-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -233,26 +264,42 @@
             </path>
             <path>
               <item name="GitU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GitU" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zxnnet" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GitU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GitU" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GitU" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542631085759" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542639368215" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -268,6 +315,8 @@
   </component>
   <component name="RunManager">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="oraclejdk-8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="io.zxnnet.controller.MainApp" />
       <module name="GitU" />
       <extension name="coverage">
@@ -309,11 +358,13 @@
       <workItem from="1542613024318" duration="4064000" />
       <workItem from="1542617501942" duration="695000" />
       <workItem from="1542629078076" duration="2341000" />
+      <workItem from="1542636403713" duration="2975000" />
+      <workItem from="1542639407002" duration="111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27613000" />
+    <option name="totallyTimeSpent" value="30699000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,7 +376,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="7" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.13607258" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2379936" />
@@ -336,7 +387,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.16595517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32740587" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32740587" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -354,7 +405,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Database" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.18569905" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.18569905" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,28 +449,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/WindowController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Main.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="51" selection-end-line="27" selection-end-column="51" />
+        <state relative-caret-position="1260">
+          <caret line="42" column="18" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Main.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="31" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+        <state relative-caret-position="300">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-510">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
         </state>
       </provider>
     </entry>

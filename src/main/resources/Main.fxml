@@ -9,7 +9,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<BorderPane fx:id="BasePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.zxnnet.controller.WindowController">
+<BorderPane fx:id="BasePane" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="768.0" prefWidth="1366.0"
+            xmlns="http://javafx.com/javafx/8.0.172-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="io.zxnnet.controller.MainController">
    <top>
       <ToolBar fx:id="topbar" onMouseDragged="#movwindow" onMousePressed="#getlocation" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
         <items>
@@ -21,7 +25,7 @@
                   <Font name="DejaVu Sans Mono Bold" size="20.0" />
                </font>
             </Label>
-          <Button fx:id="Import" mnemonicParsing="false" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #545454;" text="Import" textFill="WHITE">
+          <Button fx:id="Import" onMouseClicked="#openProject" mnemonicParsing="false" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #545454;" text="Import" textFill="WHITE">
                <font>
                   <Font name="DejaVu Sans Mono Bold" size="13.0" />
                </font>
