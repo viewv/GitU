@@ -4,7 +4,9 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+
 
 public class WindowController {
 
@@ -12,7 +14,27 @@ public class WindowController {
     @FXML Button minButton;
     @FXML Button maxButton;
 
+    class Delta{
+        double x,y;
+    }
+
+    final Delta dragDelta = new Delta();
+
     private Tooltip tooltip = new Tooltip();
+
+    @FXML
+    public void getlocation(MouseEvent mouseEvent){
+        Stage stage = (Stage)minButton.getScene().getWindow();
+        dragDelta.x = stage.getX() - mouseEvent.getSceneX();
+        dragDelta.y = stage.getY() - mouseEvent.getScreenY();
+    }
+
+    @FXML
+    public void movwindow(MouseEvent mouseEvent){
+        Stage stage = (Stage)minButton.getScene().getWindow();
+        stage.setX(mouseEvent.getScreenX() + dragDelta.x);
+        stage.setY(mouseEvent.getScreenY() + dragDelta.y);
+    }
 
     @FXML
     public void exitalert(){
@@ -46,6 +68,7 @@ public class WindowController {
     @FXML
     public void maxapp(){
         Stage stage = (Stage)maxButton.getScene().getWindow();
-        stage.setMaximized(!stage.isMaximized());
+        stage.setFullScreenExitHint("esc to quit max windows");
+        stage.setFullScreen(!stage.isFullScreen());
     }
 }

@@ -5,10 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.util.Objects;
 
 public class MainApp extends Application{
+
 
     public static void main(String[] args) {
         launch(args);
@@ -20,6 +22,7 @@ public class MainApp extends Application{
         Scene scene = new Scene(root, 1366, 768);
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getClassLoader().getResource("application.css")).toExternalForm());
 
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setTitle("GitU");
         primaryStage.setScene(scene);
         primaryStage.show();
