@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXListView?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.web.WebView?>
 
-<BorderPane fx:id="BasePane" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="768.0" prefWidth="1366.0"
-            xmlns="http://javafx.com/javafx/8.0.172-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="io.zxnnet.controller.MainController">
+<BorderPane fx:id="BasePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.zxnnet.controller.MainController">
    <top>
       <ToolBar fx:id="topbar" onMouseDragged="#movwindow" onMousePressed="#getlocation" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
         <items>
@@ -25,7 +25,7 @@
                   <Font name="DejaVu Sans Mono Bold" size="20.0" />
                </font>
             </Label>
-          <Button fx:id="Import" onMouseClicked="#openProject" mnemonicParsing="false" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #545454;" text="Import" textFill="WHITE">
+          <Button fx:id="Import" mnemonicParsing="false" onMouseClicked="#openProject" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #545454;" text="Import" textFill="WHITE">
                <font>
                   <Font name="DejaVu Sans Mono Bold" size="13.0" />
                </font>
@@ -40,13 +40,36 @@
                       <Font name="DejaVu Sans Mono Bold" size="13.0" />
                   </font>
               </Button>
+            <Label layoutX="67.0" layoutY="12.0" text="       " textFill="#39a3e4">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="Push" layoutX="290.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #39a3e4;" text="Push" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Push1" layoutX="452.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #90EE90;" text="Pull" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="Push11" layoutX="525.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #FFB5C5;" text="Branch" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="13.0" />
+               </font>
+            </Button>
           </items>
       </ToolBar>
    </top>
    <center>
-      <SplitPane dividerPositions="0.1532258064516129" BorderPane.alignment="CENTER">
+      <SplitPane dividerPositions="0.17869415807560138" BorderPane.alignment="CENTER">
         <items>
-          <AnchorPane />
+          <AnchorPane>
+               <children>
+                  <JFXListView prefHeight="686.0" prefWidth="205.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
           <AnchorPane>
                <children>
                   <WebView layoutX="242.0" layoutY="114.0" prefHeight="696.0" prefWidth="811.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
@@ -55,4 +78,33 @@
         </items>
       </SplitPane>
    </center>
+   <bottom>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <items>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Git_icon.png" />
+               </image>
+            </ImageView>
+            <Label minWidth="100.0" textFill="#f5f7f8">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@commit.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="10.0" layoutY="15.0" minWidth="150.0" textFill="#f5f7f8">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="15.0" />
+               </font>
+            </Label>
+         </items>
+      </ToolBar>
+   </bottom>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
 </BorderPane>

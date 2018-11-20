@@ -6,6 +6,8 @@ import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.DirectoryChooser;
@@ -13,13 +15,16 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 
 
 public class MainController {
 
-    public Button Import;
-    public Button Init;
-    public Button Clone;
+    @FXML public Button Import;
+    @FXML public Button Init;
+    @FXML public Button Clone;
+    @FXML public Button Push;
+    @FXML public ImageView giticon;
     @FXML Button exitButton;
     @FXML Button minButton;
     @FXML Button maxButton;
@@ -29,19 +34,26 @@ public class MainController {
         double x,y;
     }
 
-    final Delta dragDelta = new Delta();
+    private final Delta dragDelta = new Delta();
 
     private Tooltip tooltip = new Tooltip();
     private openlocalRepositorie localRes = new openlocalRepositorie();
 
+//    Image giticonimage = new Image(Objects.requireNonNull(getClass().getClassLoader().getResource("Git_icon.png")).toExternalForm());
+
+//    @FXML
+//    public void initgiticon(){
+//        giticon.setImage(giticonimage);
+//    }
+
     @FXML
     public void openProject() throws IOException {
         DirectoryChooser directoryChooser = new DirectoryChooser();
-        directoryChooser.setTitle("Open Local Git Repositorie");
+        directoryChooser.setTitle("Open Local Git Repositor");
         File file = directoryChooser.showDialog(new Stage());
         if (file != null){
            System.out.println(file.getAbsolutePath());
-           localRes.openres(file.getPath());
+           localRes.openres(file.getAbsolutePath());
         }
     }
 
