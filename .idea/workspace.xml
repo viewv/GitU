@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c567aa-d9a4-4f14-8bde-53a239794bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Git_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController$Delta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController$Delta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/model/openlocalRepositorie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/model/openlocalRepositorie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/GitU.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/GitU.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -129,7 +119,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="1219">
               <caret line="59" selection-start-line="59" selection-end-line="59" />
             </state>
           </provider>
@@ -210,7 +200,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="240" />
     <option name="y" value="98" />
     <option name="width" value="1370" />
@@ -305,7 +295,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542708542689" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542708882883" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -382,12 +372,12 @@
       <workItem from="1542639407002" duration="111000" />
       <workItem from="1542695531916" duration="127000" />
       <workItem from="1542695824640" duration="4997000" />
-      <workItem from="1542702422135" duration="5976000" />
+      <workItem from="1542702422135" duration="6293000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41799000" />
+    <option name="totallyTimeSpent" value="42116000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -490,16 +480,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -516,9 +496,19 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/git2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" column="64" selection-start-line="17" selection-start-column="64" selection-end-line="17" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="1219">
           <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>

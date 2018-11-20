@@ -1,13 +1,10 @@
 package io.zxnnet.controller;
 
 import io.zxnnet.model.openlocalRepositorie;
-
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tooltip;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.DirectoryChooser;
@@ -15,7 +12,6 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Objects;
 
 
 public class MainController {
@@ -24,7 +20,6 @@ public class MainController {
     @FXML public Button Init;
     @FXML public Button Clone;
     @FXML public Button Push;
-    @FXML public ImageView giticon;
     @FXML Button exitButton;
     @FXML Button minButton;
     @FXML Button maxButton;
@@ -39,12 +34,6 @@ public class MainController {
     private Tooltip tooltip = new Tooltip();
     private openlocalRepositorie localRes = new openlocalRepositorie();
 
-//    Image giticonimage = new Image(Objects.requireNonNull(getClass().getClassLoader().getResource("Git_icon.png")).toExternalForm());
-
-//    @FXML
-//    public void initgiticon(){
-//        giticon.setImage(giticonimage);
-//    }
 
     @FXML
     public void openProject() throws IOException {
