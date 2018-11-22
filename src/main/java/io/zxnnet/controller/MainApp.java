@@ -18,9 +18,9 @@ public class MainApp extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Main.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("GUI/Main.fxml")));
         Scene scene = new Scene(root, 1366, 768);
-        scene.getStylesheets().add(Objects.requireNonNull(getClass().getClassLoader().getResource("application.css")).toExternalForm());
+        scene.getStylesheets().add(Objects.requireNonNull(getClass().getClassLoader().getResource("Style/light.css")).toExternalForm());
 
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setTitle("GitU");
