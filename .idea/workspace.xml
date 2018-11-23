@@ -2,33 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c567aa-d9a4-4f14-8bde-53a239794bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/view/Branchinfodata.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/GUI/Main.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Style/light.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Style/list.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitGitResposity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitGitResposity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Git_icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Icon/Git_icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/commit.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Icon/commit.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/git2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Icon/git2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/merge.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Icon/merge.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Git_icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/commit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/git2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController$Delta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController$Delta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/model/InitGitResposity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/model/InitGitResposity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/model/openlocalRepositorie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/model/openlocalRepositorie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/merge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Style/list.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Style/list.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,7 +52,7 @@
           <entry key="css" value="136" />
           <entry key="dummy" value="31" />
           <entry key="fxml" value="560" />
-          <entry key="java" value="3449" />
+          <entry key="java" value="3581" />
           <entry key="md" value="90" />
           <entry key="xml" value="40" />
         </counts>
@@ -84,7 +60,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="136" />
-          <entry key="JAVA" value="3449" />
+          <entry key="JAVA" value="3581" />
           <entry key="Markdown" value="90" />
           <entry key="PLAIN_TEXT" value="31" />
           <entry key="XML" value="600" />
@@ -93,10 +69,10 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="classpath" value="1" />
-          <entry key="css" value="8" />
+          <entry key="css" value="9" />
           <entry key="fxml" value="25" />
           <entry key="iml" value="1" />
-          <entry key="java" value="9" />
+          <entry key="java" value="11" />
           <entry key="jpg" value="4" />
           <entry key="md" value="2" />
           <entry key="png" value="18" />
@@ -106,11 +82,11 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="8" />
+          <entry key="CSS" value="9" />
           <entry key="Eclipse" value="1" />
           <entry key="IDEA_MODULE" value="1" />
           <entry key="Image" value="22" />
-          <entry key="JAVA" value="9" />
+          <entry key="JAVA" value="11" />
           <entry key="Markdown" value="2" />
           <entry key="XML" value="30" />
         </counts>
@@ -122,11 +98,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="421">
+              <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3240">
-              <caret line="108" column="55" lean-forward="true" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
+            <state relative-caret-position="-690">
+              <caret line="70" column="26" lean-forward="true" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -135,8 +123,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Icon/git2.png">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="547">
+              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/Style/list.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -175,13 +179,13 @@
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/view/Branchinfodata.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitGitResposity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/Style/application.css" />
         <option value="$PROJECT_DIR$/src/main/resources/Style/light.css" />
-        <option value="$PROJECT_DIR$/src/main/resources/Style/list.css" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/GUI/Main.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/Style/list.css" />
       </list>
     </option>
   </component>
@@ -220,9 +224,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="95" />
-    <option name="y" value="59" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="156" />
+    <option name="y" value="13" />
     <option name="width" value="1658" />
     <option name="height" value="998" />
   </component>
@@ -269,6 +273,39 @@
               <item name="GitU" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GitU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GitU" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zxnnet" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GitU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GitU" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zxnnet" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GitU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GitU" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="zxnnet" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="GitU" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GitU" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -278,14 +315,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="GitU" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GitU" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="Icon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="GitU" type="b2602c69:ProjectViewProjectNode" />
@@ -306,7 +335,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542894235978" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542895212667" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Global Libraries" />
@@ -394,12 +423,12 @@
       <workItem from="1542871432120" duration="6777000" />
       <workItem from="1542884920332" duration="379000" />
       <workItem from="1542890487497" duration="395000" />
-      <workItem from="1542891210926" duration="2382000" />
+      <workItem from="1542891210926" duration="3957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58852000" />
+    <option name="totallyTimeSpent" value="60427000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -411,10 +440,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="156" y="13" width="1658" height="998" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.113127" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.1308933" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2379936" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -423,7 +452,7 @@
       <window_info id="Favorites" order="6" side_tool="true" weight="0.16595517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32837528" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.29811716" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.29748285" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -502,30 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Style/list.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-71">
-          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/Icon/git2.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -544,6 +549,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/Icon/merge.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Icon/commit.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/Icon/git2.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -555,13 +563,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Icon/commit.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Style/list.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3240">
-          <caret line="108" column="55" lean-forward="true" selection-start-line="108" selection-start-column="55" selection-end-line="108" selection-end-column="55" />
+        <state relative-caret-position="-690">
+          <caret line="70" column="26" lean-forward="true" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

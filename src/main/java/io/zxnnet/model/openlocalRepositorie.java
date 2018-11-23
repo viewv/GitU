@@ -3,6 +3,8 @@ package io.zxnnet.model;
 import io.zxnnet.view.Branchinfodata;
 import org.eclipse.jgit.lib.Ref;
 import org.eclipse.jgit.lib.Repository;
+import org.eclipse.jgit.revwalk.RevCommit;
+import org.eclipse.jgit.revwalk.RevWalk;
 import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 
 import java.io.File;
@@ -22,10 +24,16 @@ public class openlocalRepositorie {
                 .setGitDir(new File(path + File.separator + ".git"))
                 .build();
 
-        Ref head = existingRepo.exactRef("refs/heads/master");
+        Ref head = existingRepo.findRef("HEAD");
 
-        branchinfodata.id = head + "";
-        branchinfodata.name = existingRepo.getBranch();
+        try (RevWalk walk = new RevWalk(existingRepo)){
+            RevCommit commit = walk.parseCommit(head.getObjectId());
+            System.out.println(commit.getFullMessage());
+//            branchinfodata.id = commit.getFullMessage();
+            branchinfodata.name = existingRepo.getBranch();
+        }
+
+         branchinfodata.id = head + "";
         return branchinfodata;
     }
 }
