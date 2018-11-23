@@ -68,7 +68,7 @@
          <center>
             <SplitPane dividerPositions="0.17869415807560138" BorderPane.alignment="CENTER">
               <items>
-                  <JFXListView fx:id="listview" style="-fx-background-color: #b2babb;" stylesheets="@../Style/list.css" />
+                  <JFXListView fx:id="listview" stylesheets="@../Style/list.css" />
                   <WebView prefHeight="696.0" prefWidth="811.0" />
               </items>
             </SplitPane>

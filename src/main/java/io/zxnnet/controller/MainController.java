@@ -1,13 +1,11 @@
 package io.zxnnet.controller;
 
-import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXDialog;
-import com.jfoenix.controls.JFXDialogLayout;
-import com.jfoenix.controls.JFXListView;
+import com.jfoenix.controls.*;
 import io.zxnnet.model.InitGitResposity;
 import io.zxnnet.model.openlocalRepositorie;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
@@ -22,10 +20,14 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
-public class MainController {
+public class MainController implements Initializable {
 
     @FXML public Button Import;
     @FXML public Button Init;
@@ -46,10 +48,21 @@ public class MainController {
     private openlocalRepositorie localRes = new openlocalRepositorie();
     private InitGitResposity initRes = new InitGitResposity();
 
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
+        try {
+//            JFXPopup jfxPopup = new JFXPopup();
+            listview.setExpanded(true);
+            listview.depthProperty().set(2);
+        }catch (Exception ex){
+            Logger.getLogger(MainController.class.getName()).log(Level.SEVERE,null,ex);
+        }
+    }
+
     @FXML
     public void initProject() throws IOException {
         DirectoryChooser directoryChooser = new DirectoryChooser();
-        directoryChooser.setTitle("init Local Git Repositor");
+        directoryChooser.setTitle("init Local Git Repository");
         File file = directoryChooser.showDialog(new Stage());
         if (file != null){
             System.out.println(file.getAbsolutePath());
@@ -66,7 +79,7 @@ public class MainController {
     @FXML
     public void openProject() throws IOException {
         DirectoryChooser directoryChooser = new DirectoryChooser();
-        directoryChooser.setTitle("Open Local Git Repositor");
+        directoryChooser.setTitle("Open Local Git Repository");
         File file = directoryChooser.showDialog(new Stage());
         if (file != null){
             //Add a temp to judge wether the dir have .git file
@@ -97,8 +110,8 @@ public class MainController {
                 tempimag.setFitWidth(30);
                 templabel.setGraphic(tempimag);
 
-                templabel.setStyle(Objects.requireNonNull(
-                        getClass().getClassLoader().getResource("Style/list.css")).toExternalForm());
+//                templabel.setStyle(Objects.requireNonNull(
+//                        getClass().getClassLoader().getResource("Style/list.css")).toExternalForm());
 
                 listview.getItems().add(templabel);
             }
@@ -107,7 +120,7 @@ public class MainController {
                 // alert user !
                 JFXDialogLayout content = new JFXDialogLayout();
                 content.setHeading(new Text("Wrong!"));
-                content.setBody(new Text("This Floder does not init with git\n" +
+                content.setBody(new Text("This Folder does not init with git\n" +
                         "Please init with Git and try again!"));
                 JFXDialog dialog = new JFXDialog(stackPane,content,JFXDialog.DialogTransition.CENTER);
                 JFXButton button = new JFXButton("Close");
@@ -126,6 +139,7 @@ public class MainController {
 
     @FXML
     public void movwindow(MouseEvent mouseEvent){
+        mouseEvent.consume();
         Stage stage = (Stage)BasePane.getScene().getWindow();
         stage.setX(mouseEvent.getScreenX() - dragDelta.x);
         stage.setY(mouseEvent.getScreenY() - dragDelta.y);

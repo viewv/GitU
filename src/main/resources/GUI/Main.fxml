@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXPopup?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
@@ -68,7 +69,7 @@
          <center>
             <SplitPane dividerPositions="0.17869415807560138" BorderPane.alignment="CENTER">
               <items>
-                  <JFXListView fx:id="listview" style="-fx-background-color: #b2babb;" stylesheets="@../Style/list.css" />
+                  <JFXListView fx:id="listview" stylesheets="@../Style/list.css" />
                   <WebView prefHeight="696.0" prefWidth="811.0" />
               </items>
             </SplitPane>
