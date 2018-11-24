@@ -17,6 +17,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+import org.eclipse.jgit.api.errors.GitAPIException;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,76 +61,76 @@ public class MainController implements Initializable {
     }
 
     @FXML
-    public void initProject() throws IOException {
+    public void initProject() throws GitAPIException {
         DirectoryChooser directoryChooser = new DirectoryChooser();
         directoryChooser.setTitle("init Local Git Repository");
         File file = directoryChooser.showDialog(new Stage());
         if (file != null){
             System.out.println(file.getAbsolutePath());
             initRes.init(file.getAbsolutePath());
+
+
+            JFXDialogLayout content = new JFXDialogLayout();
+            content.setHeading(new Text("Successful"));
+            content.setBody(new Text("Successfully init a Repository!"));
+            ShowAlertDialog(content);
+
         }
     }
+
+    private void ShowAlertDialog(JFXDialogLayout content) {
+        JFXDialog dialog = new JFXDialog(stackPane,content,JFXDialog.DialogTransition.CENTER);
+        JFXButton button = new JFXButton("Close");
+        button.setOnMouseClicked(event -> dialog.close());
+        content.setActions(button);
+        dialog.show();
+    }
+
+    @FXML
+    public void openProject() throws IOException {
+        DirectoryChooser directoryChooser = new DirectoryChooser();
+        directoryChooser.setTitle("Open Local Git Repository");
+        // use user.name to cross platform
+        directoryChooser.setInitialDirectory(new File(System.getProperty("user.home")));
+        File file = directoryChooser.showDialog(new Stage());
+        if (file != null){
+
+            File tempjument = new File(file.getAbsolutePath() + File.separator + ".git");
+
+            if (tempjument.exists() && tempjument.isDirectory()){
+
+                branchName.setText(localRes.openres(file.getAbsolutePath()).name);
+                branchId.setText(localRes.openres(file.getAbsolutePath()).id);
+                Label templabel = new Label(file.getName() + "\n" + branchName.getText());
+
+                ImageView tempimag = new ImageView(new Image(Objects.requireNonNull(
+                        getClass().getClassLoader().getResource(
+                                "Icon/git2.png")).toExternalForm()));
+
+                // set the image size to fit into the label
+                tempimag.setFitHeight(30);
+                tempimag.setFitWidth(30);
+                templabel.setGraphic(tempimag);
+
+                listview.getItems().add(templabel);
+            }
+            else {
+
+                JFXDialogLayout content = new JFXDialogLayout();
+                content.setHeading(new Text("Wrong!"));
+                content.setBody(new Text("This Folder does not init with git\n" +
+                        "Please init with Git and try again!"));
+                ShowAlertDialog(content);
+            }
+        }
+    }
+
 
     class Delta{
         double x,y;
     }
 
     private final Delta dragDelta = new Delta();
-
-    @FXML
-    public void openProject() throws IOException {
-        DirectoryChooser directoryChooser = new DirectoryChooser();
-        directoryChooser.setTitle("Open Local Git Repository");
-        File file = directoryChooser.showDialog(new Stage());
-        if (file != null){
-            //Add a temp to judge wether the dir have .git file
-            File tempjument = new File(file.getAbsolutePath() + File.separator + ".git");
-
-//            System.out.println(tempjument.getAbsolutePath());
-//            System.out.println(tempjument.exists());
-//            System.out.println(tempjument.isDirectory());
-
-            if (tempjument.exists() && tempjument.isDirectory()){
-//                System.out.println(file.getAbsolutePath());
-                branchName.setText(localRes.openres(file.getAbsolutePath()).name);
-                branchId.setText(localRes.openres(file.getAbsolutePath()).id);
-                Label templabel = new Label(file.getName() + "\n" + branchName.getText());
-                /**
-                 * @TODO need to resize the size of the image in icon file!
-                 */
-//                templabel.setGraphic(new ImageView(new Image(
-//                        Objects.requireNonNull(
-//                                getClass().getClassLoader().getResource(
-//                                        "Icon/git2.png")).toExternalForm())
-//                ));
-                ImageView tempimag = new ImageView(new Image(Objects.requireNonNull(
-                        getClass().getClassLoader().getResource(
-                                "Icon/git2.png")).toExternalForm()));
-
-                tempimag.setFitHeight(30);
-                tempimag.setFitWidth(30);
-                templabel.setGraphic(tempimag);
-
-//                templabel.setStyle(Objects.requireNonNull(
-//                        getClass().getClassLoader().getResource("Style/list.css")).toExternalForm());
-
-                listview.getItems().add(templabel);
-            }
-            else {
-//                System.out.println("Now init a dialog");
-                // alert user !
-                JFXDialogLayout content = new JFXDialogLayout();
-                content.setHeading(new Text("Wrong!"));
-                content.setBody(new Text("This Folder does not init with git\n" +
-                        "Please init with Git and try again!"));
-                JFXDialog dialog = new JFXDialog(stackPane,content,JFXDialog.DialogTransition.CENTER);
-                JFXButton button = new JFXButton("Close");
-                button.setOnMouseClicked(event -> dialog.close());
-                content.setActions(button);
-                dialog.show();
-            }
-        }
-    }
 
     @FXML
     public void getlocation(MouseEvent mouseEvent){

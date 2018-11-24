@@ -1,8 +1,9 @@
-/*.root{*/
-    /*-fx-font-size: 1.2em;*/
-    /*-fx-font-weight: Bold;*/
-    /*-fx-font-family: "DejaVu Sans Mono";*/
-/*}*/
+.root{
+    -fx-font-size: 1.2em;
+    -fx-font-weight: Bold;
+    -fx-font-family: "DejaVu Sans Mono";
+}
+
 
 .jfx-list-cell:selected{
     -fx-background-color: #3d8c91;

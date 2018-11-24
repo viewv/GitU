@@ -11,8 +11,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * @author viewv
- * @apiNote open a local git repo
+ * Todo Their have a problem when you open a repo have no init commit, Their will be a wrong you must tell this info
  */
 
 public class openlocalRepositorie {
