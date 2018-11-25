@@ -3,6 +3,7 @@ package io.zxnnet.controller;
 import com.jfoenix.controls.*;
 import io.zxnnet.model.InitGitResposity;
 import io.zxnnet.model.openlocalRepositorie;
+import io.zxnnet.view.Branchinfodata;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -64,11 +65,11 @@ public class MainController implements Initializable {
     public void initProject() throws GitAPIException {
         DirectoryChooser directoryChooser = new DirectoryChooser();
         directoryChooser.setTitle("init Local Git Repository");
+        directoryChooser.setInitialDirectory(new File(System.getProperty("user.home")));
         File file = directoryChooser.showDialog(new Stage());
         if (file != null){
             System.out.println(file.getAbsolutePath());
             initRes.init(file.getAbsolutePath());
-
 
             JFXDialogLayout content = new JFXDialogLayout();
             content.setHeading(new Text("Successful"));
@@ -99,8 +100,10 @@ public class MainController implements Initializable {
 
             if (tempjument.exists() && tempjument.isDirectory()){
 
-                branchName.setText(localRes.openres(file.getAbsolutePath()).name);
-                branchId.setText(localRes.openres(file.getAbsolutePath()).id);
+                Branchinfodata data = localRes.openres(file.getAbsolutePath());
+
+                branchName.setText(data.name);
+                branchId.setText(data.id);
                 Label templabel = new Label(file.getName() + "\n" + branchName.getText());
 
                 ImageView tempimag = new ImageView(new Image(Objects.requireNonNull(
@@ -113,6 +116,13 @@ public class MainController implements Initializable {
                 templabel.setGraphic(tempimag);
 
                 listview.getItems().add(templabel);
+
+                if (data.exinfo != null){
+                    JFXDialogLayout content = new JFXDialogLayout();
+                    content.setHeading(new Text("Note!"));
+                    content.setBody(new Text(data.exinfo));
+                    ShowAlertDialog(content);
+                }
             }
             else {
 
