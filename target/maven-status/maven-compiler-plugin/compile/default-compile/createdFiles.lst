@@ -4,3 +4,4 @@ io/zxnnet/view/Branchinfodata.class
 io/zxnnet/model/openlocalRepositorie.class
 io/zxnnet/controller/MainController.class
 io/zxnnet/model/InitGitResposity.class
+io/zxnnet/model/InitReadMe.class
