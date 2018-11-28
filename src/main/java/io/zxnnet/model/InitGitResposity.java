@@ -5,6 +5,7 @@ import org.eclipse.jgit.api.errors.GitAPIException;
 
 import java.io.File;
 
+//这里不应该是空返回函数，应该返回对应的路径
 public class InitGitResposity {
     public void init(String workingDirectory) throws IllegalStateException, GitAPIException {
         File file = new File(workingDirectory);

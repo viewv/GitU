@@ -20,7 +20,7 @@ public class InitReadMe {
             FileOutputStream outputStream = new FileOutputStream(initReadMe);
             outputStream.write(initsource);
             outputStream.close();
-            git.add().addFilepattern("README.md").call();
+            git.add().addFilepattern(".").call();
             git.commit().setMessage("Init Commit").call();
         } catch (FileNotFoundException | NoMessageException | NoFilepatternException | WrongRepositoryStateException | UnmergedPathsException | NoHeadException | ConcurrentRefUpdateException | AbortedByHookException e) {
             e.printStackTrace();

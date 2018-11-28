@@ -27,3 +27,15 @@
     -fx-vertical-gap :10;
     -fx-pref-width: 150;
 }
+
+.jfx-snackbar-content{
+    -fx-background-color: #000000;
+}
+
+.jfx-snackbar-toast{
+    -fx-text-fill: #FFFFFF;
+}
+
+.jfx-snackbar-action{
+    -fx-text-fill: #9686d4;
+}

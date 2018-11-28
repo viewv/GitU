@@ -1,7 +1,9 @@
 package io.zxnnet.model;
 
-import io.zxnnet.view.Branchinfodata;
+import io.zxnnet.view.GitRepoMetaData;
+import io.zxnnet.view.RepoInfo;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.lib.AnyObjectId;
 import org.eclipse.jgit.lib.Ref;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.revwalk.RevCommit;
@@ -11,14 +13,10 @@ import org.eclipse.jgit.storage.file.FileRepositoryBuilder;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * Todo Their have a problem when you open a repo have no init commit, Their will be a wrong you must tell this info!
- */
-
 public class openlocalRepositorie {
-    public Branchinfodata openres(String path) throws IOException {
+    public RepoInfo openres(String path) throws IOException {
 
-        Branchinfodata branchinfodata = new Branchinfodata();
+        RepoInfo repoInfo = new RepoInfo();
 
         Repository existingRepo = new FileRepositoryBuilder()
                 .setGitDir(new File(path + File.separator + ".git"))
@@ -28,23 +26,47 @@ public class openlocalRepositorie {
 
         Ref head = existingRepo.findRef("HEAD");
 
-        try (RevWalk walk = new RevWalk(existingRepo)){
-            if (head.getObjectId() == null){
-                InitReadMe.initReadme(path,git);
-                branchinfodata.exinfo = "Note! This repo is empty,System init a README.md for you!";
-                existingRepo = new FileRepositoryBuilder()
-                        .setGitDir(new File(path + File.separator + ".git"))
-                        .build();
-                head = existingRepo.findRef("HEAD");
-            }
-            RevCommit commit = walk.parseCommit(head.getObjectId());
-            System.out.println(commit.getFullMessage());
-//            branchinfodata.id = commit.getFullMessage();
-            branchinfodata.name = existingRepo.getBranch();
+        if (head.getObjectId() == null){
+            InitReadMe.initReadme(path,git);
+            repoInfo.exinfo = "Note! This repo is empty,System init a README.md for you!";
+            existingRepo = new FileRepositoryBuilder()
+                    .setGitDir(new File(path + File.separator + ".git"))
+                    .build();
+            head = existingRepo.findRef("HEAD");
         }
 
-        branchinfodata.id = head + "";
-        return branchinfodata;
+        /**
+         * @apiNote following code can get git file
+         * and commit message, it is very useful
+         */
+        GitRepoMetaData metaData = new GitRepoMetaData();
+
+        RevWalk walk = new RevWalk(existingRepo);
+
+        AnyObjectId id = existingRepo.resolve("HEAD");
+
+        System.out.println(id);
+
+        RevCommit commit =walk.parseCommit(id);
+        //Important!
+        walk.markStart(commit);
+
+        metaData.setRevWalk(walk);
+        metaData.setRevCommit(commit);
+        metaData.setRepository(existingRepo);
+
+        for (String x : metaData.getShortMessage()) {
+            System.out.println(x);
+        }
+
+        //return a repo repo storage all info you need
+        repoInfo.path = path;
+        repoInfo.commit = commit;
+        repoInfo.repository = existingRepo;
+        repoInfo.id = head + "";
+        repoInfo.name = existingRepo.getBranch();
+
+        return repoInfo;
     }
 }
 
