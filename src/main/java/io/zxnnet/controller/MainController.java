@@ -109,19 +109,6 @@ public class MainController implements Initializable {
                 RepoInfo data = localRes.openres(file.getAbsolutePath());
                 setInfoBar(data.name,data.id);
 
-//                GitRepoMetaData Repo = new GitRepoMetaData();
-
-//                Repo.setRepository(data.repository);
-//                Repo.setRevCommit(data.commit);
-//                Repo.setRevWalk(data.walk);
-//
-//                ArrayList<String> message = Repo.getShortMessage();
-//
-//                for (String x:message) {
-//                    System.out.println(x);
-//                }
-
-
                 Label templabel = new Label(file.getName() + "\n" + branchName.getText());
 
                 ImageView tempimag = new ImageView(new Image(Objects.requireNonNull(
@@ -135,7 +122,6 @@ public class MainController implements Initializable {
                 listview.getItems().add(templabel);
 
                 if (data.exinfo != null){
-
                     JFXSnackbar snackbar = new JFXSnackbar(stackPane);
                     snackbar.show("Note!\n" + data.exinfo,"Close",5000,
                             event -> snackbar.unregisterSnackbarContainer(stackPane));
@@ -206,8 +192,6 @@ public class MainController implements Initializable {
         content.setActions(button);
         dialog.show();
     }
-
-
 
 
 

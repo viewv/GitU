@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4c567aa-d9a4-4f14-8bde-53a239794bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/CloneProgessCircle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/CloneProject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/view/GitRepoMetaData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitGitResposity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitGitResposity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitReadMe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitReadMe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/view/Branchinfodata.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/view/RepoInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/GUI/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/GUI/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Style/light.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Style/light.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/GitU.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/GitU.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/GUI/Main.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GUI/Main.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Style/light.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Style/light.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController$Delta.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController$Delta.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/controller/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/model/InitGitResposity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/model/InitGitResposity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/zxnnet/model/InitReadMe.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/zxnnet/model/InitReadMe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/zxnnet/view/GitRepoMetaData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/zxnnet/view/GitRepoMetaData.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -53,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+            <state relative-caret-position="3630">
+              <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
               <folding>
                 <element signature="method#initialize#0;class#MainController#0" />
                 <element signature="method#setInfoBar#0;class#MainController#0" />
@@ -98,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/view/GitRepoMetaData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="67" column="81" selection-start-line="67" selection-start-column="81" selection-end-line="67" selection-end-column="81" />
+            <state relative-caret-position="630">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -110,26 +92,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/CloneProject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1620">
+            <state relative-caret-position="816">
               <caret line="54" column="32" lean-forward="true" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/GUI/Main.fxml">
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
-            </state>
-          </provider>
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
     </leaf>
@@ -171,9 +143,9 @@
         <option value="$PROJECT_DIR$/src/main/resources/GUI/Main.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/view/RepoInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/model/CloneProject.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/model/openlocalRepositorie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/zxnnet/view/GitRepoMetaData.java" />
       </list>
     </option>
@@ -207,7 +179,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="95" />
     <option name="y" value="30" />
     <option name="width" value="1717" />
@@ -320,7 +292,7 @@
     <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543396795382" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543463407546" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jgitfx-deprecated" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -442,12 +414,12 @@
       <workItem from="1543219092678" duration="4103000" />
       <workItem from="1543236081846" duration="22549000" />
       <workItem from="1543327272339" duration="68000" />
-      <workItem from="1543368706055" duration="14167000" />
+      <workItem from="1543368706055" duration="14934000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124447000" />
+    <option name="totallyTimeSpent" value="125214000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -459,7 +431,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.15421557" />
@@ -589,14 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/GUI/Main.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
@@ -617,16 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/CloneProject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1620">
-          <caret line="54" column="32" lean-forward="true" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/InitReadMe.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -637,10 +591,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/GUI/Main.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="79" column="17" lean-forward="true" selection-start-line="79" selection-start-column="17" selection-end-line="79" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/controller/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="121" column="19" lean-forward="true" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
+        <state relative-caret-position="3630">
+          <caret line="199" lean-forward="true" selection-start-line="199" selection-end-line="199" />
           <folding>
             <element signature="method#initialize#0;class#MainController#0" />
             <element signature="method#setInfoBar#0;class#MainController#0" />
@@ -681,8 +643,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/view/GitRepoMetaData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="67" column="81" selection-start-line="67" selection-start-column="81" selection-end-line="67" selection-end-column="81" />
+        <state relative-caret-position="630">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/zxnnet/model/CloneProject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="54" column="32" lean-forward="true" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
