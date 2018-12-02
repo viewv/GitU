@@ -1,8 +1,7 @@
 package io.zxnnet.model;
 
+import io.zxnnet.view.RepoInfo;
 import javafx.scene.control.TextInputDialog;
-import javafx.stage.DirectoryChooser;
-import javafx.stage.Stage;
 import org.eclipse.jgit.api.Git;
 
 import java.io.File;
@@ -10,13 +9,7 @@ import java.util.Optional;
 
 public class CloneProject {
 
-    public boolean Clone() throws Exception {
-
-        DirectoryChooser directoryChooser = new DirectoryChooser();
-        directoryChooser.setTitle("Set Clone Location");
-        // use user.name to cross platform
-        directoryChooser.setInitialDirectory(new File(System.getProperty("user.home")));
-        File file = directoryChooser.showDialog(new Stage());
+    public static RepoInfo Clone(File file) throws Exception {
 
         if (file != null && file.exists()){
 
@@ -44,7 +37,7 @@ public class CloneProject {
             System.out.println(URLocation[0]);
 
             if (dir.exists() && dir.isDirectory()){
-                return false;
+                return null;
             } else{
                 try (Git answer = Git.cloneRepository()
                         .setURI(URLocation[0])
@@ -52,11 +45,12 @@ public class CloneProject {
                         .call()){
                     answer.close();
                     System.out.println("Having repo: " + answer.getRepository().getDirectory());
-                    return true;
+                    RepoInfo repoInfo = SetRepoInfo.set(answer.getRepository().getDirectory());
+                    return repoInfo;
                 }
             }
         }else {
-            return false;
+            return null;
         }
     }
 }

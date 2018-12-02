@@ -9,7 +9,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.zxnnet.controller.MainController">
@@ -61,19 +60,26 @@
                         <Font name="DejaVu Sans Mono Bold" size="13.0" />
                      </font>
                   </Button>
+                  <Button fx:id="Commit" layoutX="671.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #ffd661;" text="Commit" textFill="WHITE">
+                      <font>
+                          <Font name="DejaVu Sans Mono Bold" size="13.0" />
+                      </font>
+                  </Button>
                   <Button fx:id="Branch" layoutX="525.0" layoutY="10.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="69.0" style="-fx-background-color: #FFB5C5;" text="Branch" textFill="WHITE">
                      <font>
                         <Font name="DejaVu Sans Mono Bold" size="13.0" />
                      </font>
                   </Button>
+
                 </items>
             </ToolBar>
          </top>
          <center>
-            <SplitPane dividerPositions="0.179553264604811" BorderPane.alignment="CENTER">
+            <SplitPane dividerPositions="0.15542521994134897, 0.8262463343108505" BorderPane.alignment="CENTER">
               <items>
-                  <JFXListView fx:id="listview" prefHeight="686.0" prefWidth="322.0" stylesheets="@../Style/list.css" />
-                  <JFXListView fx:id="commitview" prefHeight="200.0" prefWidth="200.0" />
+                  <JFXListView fx:id="listview" onMouseClicked="#ChangeRepo" prefHeight="686.0" prefWidth="412.0" stylesheets="@../Style/list.css" />
+                  <JFXListView fx:id="commitview" onMouseClicked="#showFile" prefHeight="200.0" prefWidth="200.0" />
+                  <JFXListView fx:id="historyfiles" prefHeight="355.0" prefWidth="220.0" />
               </items>
             </SplitPane>
          </center>
@@ -103,9 +109,6 @@
                </items>
             </ToolBar>
          </bottom>
-         <right>
-            <VBox prefHeight="688.0" prefWidth="246.0" BorderPane.alignment="CENTER" />
-         </right>
       </BorderPane>
    </children>
 </StackPane>

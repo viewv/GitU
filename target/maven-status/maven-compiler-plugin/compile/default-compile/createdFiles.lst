@@ -1,7 +1,13 @@
+io/zxnnet/model/CloneProgessCircle.class
 io/zxnnet/controller/MainApp.class
-io/zxnnet/controller/MainController$Delta.class
-io/zxnnet/view/Branchinfodata.class
-io/zxnnet/model/openlocalRepositorie.class
+io/zxnnet/model/DirOpener.class
+io/zxnnet/view/RepoInfo.class
 io/zxnnet/controller/MainController.class
-io/zxnnet/model/InitGitResposity.class
 io/zxnnet/model/InitReadMe.class
+io/zxnnet/view/GitRepoMetaData.class
+io/zxnnet/model/CloneProject.class
+io/zxnnet/model/SetRepoInfo.class
+io/zxnnet/controller/MainController$Delta.class
+io/zxnnet/model/StorgeData.class
+io/zxnnet/model/openlocalRepositorie.class
+io/zxnnet/model/InitGitResposity.class

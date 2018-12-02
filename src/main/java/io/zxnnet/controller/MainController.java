@@ -1,9 +1,7 @@
 package io.zxnnet.controller;
 
 import com.jfoenix.controls.*;
-import io.zxnnet.model.CloneProject;
-import io.zxnnet.model.InitGitResposity;
-import io.zxnnet.model.openlocalRepositorie;
+import io.zxnnet.model.*;
 import io.zxnnet.view.GitRepoMetaData;
 import io.zxnnet.view.RepoInfo;
 import javafx.application.Platform;
@@ -17,8 +15,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import org.eclipse.jgit.api.errors.GitAPIException;
 
@@ -40,7 +38,8 @@ public class MainController implements Initializable {
     @FXML public Label branchId;
     @FXML public Label branchName;
     @FXML public JFXListView<Label> listview;
-    @FXML public JFXListView<Label> commitview;
+    @FXML public JFXListView<String> commitview;
+    @FXML public JFXListView<String> historyfiles;
     @FXML public Button Delete;
     @FXML public Button exitButton;
     @FXML public Button minButton;
@@ -48,100 +47,113 @@ public class MainController implements Initializable {
     @FXML public BorderPane BasePane;
     @FXML public StackPane stackPane;
 
+
+    private ArrayList<File> allRepoLocation = new ArrayList<>();
+    private ArrayList<String> shortMessage;
+    private ArrayList<ArrayList<String>> commitHistory;
+    private ArrayList<String> currfiles ;
+
     private Tooltip tooltip = new Tooltip();
-    private openlocalRepositorie localRes = new openlocalRepositorie();
-    private InitGitResposity initRes = new InitGitResposity();
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
         try {
 //            JFXPopup jfxPopup = new JFXPopup();
+            Font.loadFont(Objects.requireNonNull(getClass().getClassLoader().
+                    getResource("Data/DejaVuSansMono-Bold.ttf")).toExternalForm(), 12);
+
             listview.setExpanded(true);
             listview.depthProperty().set(2);
             commitview.setExpanded(true);
             commitview.depthProperty().set(2);
-            //TODO add a way to storage the location
-            //System.out.println(Objects.requireNonNull(MainController.class.getClassLoader().getResource("Style/light.css")).getPath());
+//            currentfiles.setExpanded(true);
+//            currentfiles.depthProperty().set(2);
+            historyfiles.setExpanded(true);
+            historyfiles.depthProperty().set(2);
+
+            File chechfile = new File(System.getProperty("user.home") +
+                    File.separator + "temp" + File.separator +  "RepoData.ssr");
+
+            if (chechfile.exists()){
+                System.out.println("Rebuild");
+
+                StorgeData storgeData = new StorgeData("RepoData");
+
+                allRepoLocation = storgeData.rebuild();
+
+                for (File x : allRepoLocation){
+                    RepoInfo data = openlocalRepositorie.openres(x);
+                    assert data != null;
+                    setScreen(data);
+                }
+            }
 
         }catch (Exception ex){
             Logger.getLogger(MainController.class.getName()).log(Level.SEVERE,null,ex);
         }
     }
 
-    //设置底边栏的快速浏览
-    private void setInfoBar(String branchname,String id){
-        branchName.setText(branchname);
-        branchId.setText(id);
+    //TODO 这个函数用来刷新界面来显示文件和底边栏信息，刷新当前库信息
+    private void setScreen(RepoInfo data){
+
+        Label label = new Label(data.reponame + "\n" + data.branchname);
+        ImageView imag = new ImageView(new Image(Objects.requireNonNull(
+                getClass().getClassLoader().getResource(
+                        "Icon/git2.png")).toExternalForm()));
+
+        imag.setFitHeight(30);
+        imag.setFitWidth(30);
+        label.setGraphic(imag);
+
+        listview.getItems().add(label);
     }
+
+
 
     //TODO 这里新建完一个库之后要导入listview中
     @FXML
-    public void initProject() throws GitAPIException {
-        DirectoryChooser directoryChooser = new DirectoryChooser();
-        directoryChooser.setTitle("init Local Git Repository");
-        directoryChooser.setInitialDirectory(new File(System.getProperty("user.home")));
-        File file = directoryChooser.showDialog(new Stage());
-        if (file != null){
-            System.out.println(file.getAbsolutePath());
-            initRes.init(file.getAbsolutePath());
+    public void initProject() throws GitAPIException, IOException {
 
+        File file = DirOpener.open();
+
+        if (file != null){
+
+            RepoInfo data =  InitGitResposity.init(file);
+            setScreen(data);
             JFXSnackbar snackbar = new JFXSnackbar(stackPane);
             snackbar.show("Successful!\nSuccessfully init a Repository!","Close",5000,
                     event -> snackbar.unregisterSnackbarContainer(stackPane));
         }
+
+        allRepoLocation.add(file);
     }
 
-
-    //TODO listview 应该修改出去，不要再这里直接调用
     @FXML
     public void openProject() throws IOException {
-        DirectoryChooser directoryChooser = new DirectoryChooser();
-        directoryChooser.setTitle("Open Local Git Repository");
-        // use user.name to cross platform
-        directoryChooser.setInitialDirectory(new File(System.getProperty("user.home")));
-        File file = directoryChooser.showDialog(new Stage());
 
-        if (file != null){
+        File file = DirOpener.open();
+        RepoInfo data = openlocalRepositorie.openres(file);
 
-            File tempjument = new File(file.getAbsolutePath() + File.separator + ".git");
+        if (data != null) {
+            setScreen(data);
 
-            if (tempjument.exists() && tempjument.isDirectory()){
-                RepoInfo data = localRes.openres(file.getAbsolutePath());
-                setInfoBar(data.name,data.id);
-
-                Label templabel = new Label(file.getName() + "\n" + branchName.getText());
-
-                ImageView tempimag = new ImageView(new Image(Objects.requireNonNull(
-                        getClass().getClassLoader().getResource(
-                                "Icon/git2.png")).toExternalForm()));
-
-                tempimag.setFitHeight(30);
-                tempimag.setFitWidth(30);
-                templabel.setGraphic(tempimag);
-
-                listview.getItems().add(templabel);
-
-                if (data.exinfo != null){
-                    JFXSnackbar snackbar = new JFXSnackbar(stackPane);
-                    snackbar.show("Note!\n" + data.exinfo,"Close",5000,
-                            event -> snackbar.unregisterSnackbarContainer(stackPane));
-                }
-            }
-            else {
-
+            if (data.exinfo != null) {
                 JFXSnackbar snackbar = new JFXSnackbar(stackPane);
-                snackbar.show("Wrong!\nThis Folder does not init with git\n" +
-                                "Please init with Git and try again!","Close",5000,
+                snackbar.show("Note!\n" + data.exinfo, "Close", 5000,
                         event -> snackbar.unregisterSnackbarContainer(stackPane));
             }
+        } else {
+            JFXSnackbar snackbar = new JFXSnackbar(stackPane);
+            snackbar.show("Wrong!\nThis Folder does not init with git\n" +
+                            "Please init with Git and try again!", "Close", 5000,
+                    event -> snackbar.unregisterSnackbarContainer(stackPane));
         }
+        allRepoLocation.add(file);
     }
 
-    @FXML
     //TODO 这里克隆完之后要调用open来导入
+    @FXML
     public void cloneProject() throws Exception {
-
-        CloneProject cloneProject = new CloneProject();
 
         JFXDialogLayout content = new JFXDialogLayout();
         content.setHeading(new Text("Working..."));
@@ -149,13 +161,16 @@ public class MainController implements Initializable {
         JFXDialog jfxDialog = new JFXDialog(stackPane, content, JFXDialog.DialogTransition.CENTER);
         jfxDialog.show();
 
-        boolean finised = cloneProject.Clone();
+        File file = DirOpener.open();
+        RepoInfo data = CloneProject.Clone(file);
 
-        if (finised){
+        if (data != null){
             jfxDialog.close();
+            setScreen(data);
             JFXSnackbar snackbar = new JFXSnackbar(stackPane);
             snackbar.show("Successful!\nSuccessfully Clone a Repository!","Close",5000,
                         event -> snackbar.unregisterSnackbarContainer(stackPane));
+            setScreen(data);
         }
         else {
             jfxDialog.close();
@@ -163,10 +178,11 @@ public class MainController implements Initializable {
             snackbar.show("Fail!\nCheck your information and Try again!","Close",5000,
                         event -> snackbar.unregisterSnackbarContainer(stackPane));
         }
+
+        allRepoLocation.add(file);
     }
 
-
-    //删除选中的条目
+    //TODO 删除选中的条目
     @FXML
     public void deleteProject() {
         final int seleteIdx = listview.getSelectionModel().getSelectedIndex();
@@ -181,23 +197,77 @@ public class MainController implements Initializable {
             listview.getSelectionModel().select(newSelectedIdx);
             System.out.println("selectIdx: " + seleteIdx);
             System.out.println("item: " + itemToRemove.getText());
+
+            allRepoLocation.remove(seleteIdx);
+            commitview.getItems().clear();
+            historyfiles.getItems().clear();
+//            currentfiles.getItems().clear();
+            shortMessage.clear();
+            commitHistory.clear();
+            currfiles.clear();
+        }
+    }
+
+    @FXML
+    public void ChangeRepo() throws IOException, GitAPIException {
+
+        int seleteIdx = listview.getSelectionModel().getSelectedIndex();
+
+        if (seleteIdx != -1){
+            File file = allRepoLocation.get(seleteIdx);
+            RepoInfo data = openlocalRepositorie.openres(file);
+            assert data != null;
+            GitRepoMetaData metaData = new GitRepoMetaData();
+            metaData.setRepository(data.repository);
+            metaData.setRevCommit(data.commit);
+            metaData.setRevWalk(data.walk);
+
+            shortMessage = metaData.getShortMessage();
+            commitHistory = metaData.getCommitFiles();
+            currfiles = metaData.getUncommit();
+
+            branchName.setText(data.branchname);
+            branchId.setText(data.id);
+
+//            setCurrentfiles(currfiles);
+            setCommitview(shortMessage);
+            historyfiles.getItems().clear();
+        }
+    }
+
+    private void setCommitview(ArrayList<String> Message){
+
+        commitview.getItems().clear();
+        for (String x: Message) {
+            commitview.getItems().add(x);
+        }
+    }
+
+//    private void setCurrentfiles(ArrayList<String> curr){
+//        historyfiles.getItems().clear();
+//        for (String x: curr){
+//            historyfiles.getItems().add(x);
+//        }
+//    }
+
+    private void setFileview(int idx) {
+
+        historyfiles.getItems().clear();
+        for (String x :commitHistory.get(idx)) {
+            historyfiles.getItems().add(x);
+        }
+    }
+
+    @FXML
+    public void showFile() {
+        int seleteIdx = commitview.getSelectionModel().getSelectedIndex();
+        if (seleteIdx != -1){
+            setFileview(seleteIdx);
         }
     }
 
 
-    private void ShowAlertDialog(JFXDialogLayout content) {
-        JFXDialog dialog = new JFXDialog(stackPane,content,JFXDialog.DialogTransition.CENTER);
-        JFXButton button = new JFXButton("Close");
-        button.setOnMouseClicked(event -> dialog.close());
-        content.setActions(button);
-        dialog.show();
-    }
-
-
-
-
     //下面的代码是用来解决Windows的问题
-
     class Delta{
         double x,y;
     }
@@ -238,6 +308,9 @@ public class MainController implements Initializable {
 
     @FXML
     public void exitapp(){
+        StorgeData storgeData = new StorgeData("RepoData");
+        System.out.println("Storing!");
+        storgeData.store(allRepoLocation);
         Platform.exit();
     }
 

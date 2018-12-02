@@ -1,8 +1,15 @@
 <component name="ProjectDictionaryState">
   <dictionary name="viewv">
     <words>
+      <w>commitview</w>
+      <w>currentfiles</w>
+      <w>fileview</w>
+      <w>historyfiles</w>
       <w>initfile</w>
       <w>jgit</w>
+      <w>listview</w>
+      <w>selete</w>
+      <w>uncommit</w>
       <w>zxnnet</w>
     </words>
   </dictionary>

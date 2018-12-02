@@ -5,8 +5,9 @@ import org.eclipse.jgit.revwalk.RevCommit;
 import org.eclipse.jgit.revwalk.RevWalk;
 
 public class RepoInfo {
+    public String reponame;
     public String id;
-    public String name;
+    public String branchname;
     public String exinfo;
     public String path;
     public RevWalk walk;

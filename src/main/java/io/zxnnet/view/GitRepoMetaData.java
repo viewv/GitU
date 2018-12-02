@@ -1,6 +1,7 @@
 package io.zxnnet.view;
 
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.diff.DiffEntry;
 import org.eclipse.jgit.diff.DiffFormatter;
@@ -19,6 +20,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author rvvaidya
@@ -120,10 +122,9 @@ public class GitRepoMetaData {
         Git git = new Git(repository) ;
         List<DiffEntry> diff = git.diff().
                 setOldTree(parent).
-                setNewTree(current).
+                setNewTree(current).call();
                 //TODO Set the path filter to filter out the selected file
                 //setPathFilter(PathFilter.create("README.md")).
-                        call();
         for (DiffEntry entry : diff) {
             System.out.println("Entry: " + entry + ", from: " + entry.getOldId() + ", to: " + entry.getNewId());
             DiffFormatter formatter = new DiffFormatter(byteStream) ;
@@ -135,13 +136,24 @@ public class GitRepoMetaData {
         return byteStream.toString();
     }
 
+    private ArrayList<String> unCommit = new ArrayList<>();
+
+    public ArrayList<String> getUncommit() throws GitAPIException {
+        try (Git git = new Git(repository)){
+            Status status = git.status().call();
+            Set<String> uncommittedChanges = status.getUncommittedChanges();
+            unCommit.addAll(uncommittedChanges);
+            return unCommit;
+        }
+    }
+
     public ArrayList<ArrayList<String>> getCommitFiles() {
         return commitHistory;
     }
 
-    public ArrayList<String> getCommitRef(){
-        return commitSHA;
-    }
+//    public ArrayList<String> getCommitRef(){
+//        return commitSHA;
+//    }
 
     public String getRepoName() {
         String repoPath = repository.getDirectory().getParent();
@@ -149,8 +161,8 @@ public class GitRepoMetaData {
         return repoPath.substring(index + 1);
     }
 
-    //Gets commit count for this repository
-    public int getCommitCount() {
-        return commitCount;
-    }
+//    //Gets commit count for this repository
+//    public int getCommitCount() {
+//        return commitCount;
+//    }
 }

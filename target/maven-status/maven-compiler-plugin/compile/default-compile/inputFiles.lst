@@ -1,6 +1,12 @@
+/home/viewv/GitU/src/main/java/io/zxnnet/model/StorgeData.java
+/home/viewv/GitU/src/main/java/io/zxnnet/model/CloneProgessCircle.java
+/home/viewv/GitU/src/main/java/io/zxnnet/view/RepoInfo.java
+/home/viewv/GitU/src/main/java/io/zxnnet/model/DirOpener.java
 /home/viewv/GitU/src/main/java/io/zxnnet/controller/MainApp.java
 /home/viewv/GitU/src/main/java/io/zxnnet/model/InitReadMe.java
 /home/viewv/GitU/src/main/java/io/zxnnet/model/InitGitResposity.java
 /home/viewv/GitU/src/main/java/io/zxnnet/model/openlocalRepositorie.java
-/home/viewv/GitU/src/main/java/io/zxnnet/view/Branchinfodata.java
+/home/viewv/GitU/src/main/java/io/zxnnet/model/SetRepoInfo.java
+/home/viewv/GitU/src/main/java/io/zxnnet/view/GitRepoMetaData.java
 /home/viewv/GitU/src/main/java/io/zxnnet/controller/MainController.java
+/home/viewv/GitU/src/main/java/io/zxnnet/model/CloneProject.java
