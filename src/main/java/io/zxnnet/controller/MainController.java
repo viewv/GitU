@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextInputDialog;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -18,6 +19,9 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.PushCommand;
+import org.eclipse.jgit.api.RemoteAddCommand;
 import org.eclipse.jgit.api.errors.GitAPIException;
 
 import java.io.File;
@@ -25,6 +29,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -263,6 +268,70 @@ public class MainController implements Initializable {
         int seleteIdx = commitview.getSelectionModel().getSelectedIndex();
         if (seleteIdx != -1){
             setFileview(seleteIdx);
+        }
+    }
+
+    public void pushRepo() throws IOException {
+        int seleteIdx = listview.getSelectionModel().getSelectedIndex();
+        if (seleteIdx != -1){
+            File file = allRepoLocation.get(seleteIdx);
+            RepoInfo data = openlocalRepositorie.openres(file);
+            assert data != null;
+            try (Git git = new Git(data.repository)){
+                RemoteAddCommand remoteAddCommand = git.remoteAdd();
+                remoteAddCommand.setName("origin");
+                remoteAddCommand.call();
+                PushCommand pushCommand = git.push();
+                pushCommand.call();
+                JFXSnackbar snackbar = new JFXSnackbar(stackPane);
+                snackbar.show("Successful\nPush Successfully","Close",5000,
+                        event -> snackbar.unregisterSnackbarContainer(stackPane));
+            } catch (GitAPIException e) {
+                e.printStackTrace();
+            }
+        }
+
+    }
+
+    public void pullRepo() throws GitAPIException, IOException {
+        int seleteIdx = listview.getSelectionModel().getSelectedIndex();
+        if (seleteIdx != -1){
+            File file = allRepoLocation.get(seleteIdx);
+            RepoInfo data = openlocalRepositorie.openres(file);
+            assert data != null;
+            try (Git git = new Git(data.repository)){
+                git.pull().call();
+                JFXSnackbar snackbar = new JFXSnackbar(stackPane);
+                snackbar.show("Successful\nPull Successfully","Close",5000,
+                        event -> snackbar.unregisterSnackbarContainer(stackPane));
+            }
+        }
+    }
+
+    public void commitRepo() throws IOException, GitAPIException {
+        int seleteIdx = listview.getSelectionModel().getSelectedIndex();
+        if (seleteIdx != -1){
+            File file = allRepoLocation.get(seleteIdx);
+            RepoInfo data = openlocalRepositorie.openres(file);
+            assert data != null;
+            try (Git git = new Git(data.repository)){
+                git.add().addFilepattern(".").call();
+
+                TextInputDialog dialog = new TextInputDialog();
+                dialog.setTitle("Input Your Commit Message");
+                dialog.setHeaderText("Commit");
+                dialog.setContentText("Commit Message");
+                Optional<String> result = dialog.showAndWait();
+                final String[] strings = new String[1];
+
+                result.ifPresent(name -> strings[0] = name);
+
+                git.commit().setMessage(strings[0]).call();
+
+                JFXSnackbar snackbar = new JFXSnackbar(stackPane);
+                snackbar.show("Successful\nCommit Successfully","Close",5000,
+                        event -> snackbar.unregisterSnackbarContainer(stackPane));
+            }
         }
     }
 
