@@ -7,9 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4c567aa-d9a4-4f14-8bde-53a239794bf2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Java开发文档.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java开发文档.md" beforeDir="false" afterPath="$PROJECT_DIR$/Java开发文档.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -52,7 +51,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="30">
-                <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
+                <caret line="1" column="62" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="62" />
               </first_editor>
               <second_editor />
             </state>
@@ -63,8 +62,8 @@
         <entry file="file://$PROJECT_DIR$/Java开发文档.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2130">
-                <caret line="71" column="138" selection-start-line="71" selection-start-column="138" selection-end-line="71" selection-end-column="138" />
+              <first_editor relative-caret-position="597">
+                <caret line="92" column="6" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -284,7 +283,7 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="gitu" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544886815894" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544887338705" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Documents" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -421,12 +420,20 @@
       <workItem from="1543907088003" duration="2113000" />
       <workItem from="1543979600831" duration="139000" />
       <workItem from="1543979778275" duration="20000" />
-      <workItem from="1544886193929" duration="622000" />
+      <workItem from="1544886193929" duration="1140000" />
     </task>
+    <task id="LOCAL-00001" summary="Add Java Dev message">
+      <created>1544886855568</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544886855569</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165382000" />
+    <option name="totallyTimeSpent" value="165900000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,8 +446,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4994709" visible="true" weight="0.18196371" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4994709" visible="true" weight="0.13660619" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.2379936" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -478,6 +486,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add Java Dev message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Java Dev message" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -702,7 +714,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="30">
-            <caret line="1" column="62" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
+            <caret line="1" column="62" lean-forward="true" selection-start-line="1" selection-end-line="1" selection-end-column="62" />
           </first_editor>
           <second_editor />
         </state>
@@ -711,8 +723,8 @@
     <entry file="file://$PROJECT_DIR$/Java开发文档.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2130">
-            <caret line="71" column="138" selection-start-line="71" selection-start-column="138" selection-end-line="71" selection-end-column="138" />
+          <first_editor relative-caret-position="597">
+            <caret line="92" column="6" selection-start-line="92" selection-start-column="6" selection-end-line="92" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
