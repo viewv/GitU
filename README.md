@@ -39,7 +39,7 @@
 
 软件仍然处于开发状态，理想情况下我还会继续维护，这是一个最早的版本，只是能用水平，能够完成基础的git操作，希望未来能够覆盖到所有的操作。
 
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fviewv%2FGitU.svg?type=large)]
+![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fviewv%2FGitU.svg?type=large)
 
 # 3rd-Party Software for [GitU]()
 
