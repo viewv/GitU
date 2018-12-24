@@ -10,6 +10,7 @@
 这个软件最底层的就是Jgit和JavaFx，有了Jgit，用户可以不用安装Git，就可以管理库，这是有一定便利性的，在开发过程中，Java本身的界面可以说是很难看了，相比较与现在流行的前端框架，JavaFx不是很好看，虽然已经比AWT和Swing提升了许多，在搜索以后，我使用了[JFoenix](https://github.com/jfoenixadmin/JFoenix)这个开源组件来替代一些JavaFx的原声组件，这个组件可以实现一个Google Material Design的效果，是非常美观的，为了美观，我牺牲了使用系统自带的标题栏等等组件，制作了一个类似mac的前端，有很多缺点，但是看起来还不错。
 
 ![1543749587190](https://p2.cdn.img9.top/ipfs/Qme91WDrrcUTTefxRu4kDZd1fvCgRdsKNKR7Eb8ANWkgmf?2.png)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fviewv%2FGitU.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fviewv%2FGitU?ref=badge_shield)
 
 使用jdk-8开发，因为自带JavaFx，相关组件也很多，使用maven管理使用到的开源组件，在这里向Jgit，JFoenix，maven致谢，特别感谢[jgit-cookbook](https://github.com/centic9/jgit-cookbook)和[GitFx](https://github.com/jughyd/GitFx)，这两个库中的代码对我帮助很大。
 
@@ -39,3 +40,7 @@
 
 软件仍然处于开发状态，理想情况下我还会继续维护，这是一个最早的版本，只是能用水平，能够完成基础的git操作，希望未来能够覆盖到所有的操作。
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fviewv%2FGitU.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fviewv%2FGitU?ref=badge_large)
