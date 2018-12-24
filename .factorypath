@@ -1,8 +1,5 @@
 <factorypath>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/xerial/sqlite-jdbc/3.25.2/sqlite-jdbc-3.25.2.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/io/sentry/sentry/1.7.14/sentry-1.7.14.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/org/slf4j/slf4j-api/1.7.24/slf4j-api-1.7.24.jar" enabled="true" runInBatchMode="false"/>
-    <factorypathentry kind="VARJAR" id="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/jfoenix/jfoenix/8.0.7/jfoenix-8.0.7.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/netopyr/reduxfx/reduxfx-jfoenix/0.4.1/reduxfx-jfoenix-0.4.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/netopyr/reduxfx/reduxfx-view/0.4.1/reduxfx-view-0.4.1.jar" enabled="true" runInBatchMode="false"/>
@@ -16,6 +13,7 @@
     <factorypathentry kind="VARJAR" id="M2_REPO/com/jcraft/jsch/0.1.54/jsch-0.1.54.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/jcraft/jzlib/1.1.1/jzlib-1.1.1.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/com/googlecode/javaewah/JavaEWAH/1.1.6/JavaEWAH-1.1.6.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/eclipse/jgit/org.eclipse.jgit.junit/5.1.3.201810200350-r/org.eclipse.jgit.junit-5.1.3.201810200350-r.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/eclipse/jgit/org.eclipse.jgit.http.server/5.1.3.201810200350-r/org.eclipse.jgit.http.server-5.1.3.201810200350-r.jar" enabled="true" runInBatchMode="false"/>
     <factorypathentry kind="VARJAR" id="M2_REPO/org/eclipse/jgit/org.eclipse.jgit.pgm/5.1.3.201810200350-r/org.eclipse.jgit.pgm-5.1.3.201810200350-r.jar" enabled="true" runInBatchMode="false"/>
